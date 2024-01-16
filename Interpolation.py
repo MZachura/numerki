@@ -13,9 +13,9 @@ def interpolation(Yn,Xn,x,n):
     print("%.7e"%Wn)
 
 
-n=int(input("podaj n: "))
+n=int(input("input n: "))
 
-x0=float(input("podaj dla jakiego x "))
+x0=float(input("input x "))
 Yn=[]
 Xn=[]
 

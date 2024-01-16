@@ -12,7 +12,7 @@ def interpolation(Yn,Xn,x,n,Wn):
     return Wn
 
 
-print("interpolacja f(x)=x^(1/2)")
+print("interpolation f(x)=x^(1/2)")
 Wn=0.0
 Wn1=[]
 nax=1.5
@@ -33,7 +33,7 @@ for i in range(int(n1+1)):
     yi=pow(x1[i],(1/2))
     Yn1.append(yi)
 
-print("interpolacja f(x)=1/(x^2+1)")
+print("interpolation f(x)=1/(x^2+1)")
 Wn=0.0
 Wn2=[]
 Xn2=[-5,-4,-3,-2,-1,0,1,2,3,4,5]
@@ -56,12 +56,12 @@ for i in range((n*2)-1):
     yi=1/(pow(x2[i],2)+1)
     Yn2.append(yi)
 
-plt.plot(x2,Wn2, label="interpolacja")
+plt.plot(x2,Wn2, label="interpolation")
 plt.plot(x2,Yn2, label="f(x)=1/x^2+1")
 plt.legend()
 plt.show()
 
-plt.plot(x1,Wn1, label="interpolacja")
+plt.plot(x1,Wn1, label="interpolation")
 plt.plot(x1,Yn1, label="f(x)=x^(1/2)")
 plt.legend()
 plt.show()

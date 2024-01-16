@@ -10,10 +10,10 @@ v=vline.split(";")
 v.remove("\n")
 lv=len(v)
 s=[0]*lv
-wch=[0]*lv
-wy=[0]*lv
-licz=0
-print("macierz sasiedztwa:")
+istp=[0]*lv
+ostp=[0]*lv
+calculate=0
+print("neighbourhood matrix:")
 for d in range(lv):
     Nb.insert(d,[0]*lv)
 
@@ -23,8 +23,8 @@ for kline in kstore:
     k2=int(k[1])
     s[k1]+=1
     s[k2]+=1
-    wch[k2]+=1
-    wy[k1]+=1
+    istp[k2]+=1
+    ostp[k1]+=1
     for d in range(int(lv)):
         i+=1
         Nb[k1][k2]=1
@@ -35,40 +35,40 @@ for r in Nb:
         print(c,end = " ")
     print()
 print()
-for z in range(len(wch)):
-    abs1=abs((int(wy[z])-int(wch[z])))
-    if(wy[z]!=wch[z]):
-        nie=1
+for z in range(len(istp)):
+    abs1=abs((int(ostp[z])-int(istp[z])))
+    if(ostp[z]!=istp[z]):
+        no=1
     if(abs1==1):
-        licz+=1
+        calculate+=1
 
 
 print()
-print("stopien: ")
+print("step: ")
 print(s)
 print()
-print("stopien wychodzacy: ")
-print(wy)
+print("outgoing step: ")
+print(ostp)
 print()
-print("stopien wchodzacy: ")
-print(wch)
+print("incoming step: ")
+print(istp)
 print()
-print("sciezka eulera: ")
-if(licz>=2):
-    print("graf nie jest poleulerowski,nie mozna utworzyc scierzki eulera")
-    print(licz)
+print("euler's path: ")
+if(calculate>=2):
+    print("the graph is not Polemerian, no Eulerian path can be created")
+    print(calculate)
 else:
-    print("graf poleulerowski, mozna utworzyc scierzke eulera")
-    print(licz)
+    print("a poleuler graph, euler path can be created")
+    print(calculate)
 print()
-print("cykl eulera: ")
-if(nie>0):
+print("euler cycle: ")
+if(no>0):
 
-    print("w grafie nie jest mozliwe stworzenie cyklu eulera")
-    print(nie)
+    print("it is not possible to create an euler cycle in a graph")
+    print(no)
 else:
-    print("w grafie mozna utworzyc cykl eulera")
-    print(nie)
+    print("euler cycle can be created in a graph")
+    print(no)
 
 
 

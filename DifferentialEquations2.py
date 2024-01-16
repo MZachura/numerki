@@ -4,7 +4,7 @@
 
 import math
 from array import *
-def analitycznie(i,yan):
+def analitically(i,yan):
     yan.clear()
     x=0
     i=0
@@ -27,7 +27,7 @@ def euler(h,i,x,y):
 
 
 
-def rungegokutty(h,i,x,y):
+def rungekutta(h,i,x,y):
     x.clear()
     x.append(0)
     y.append(1)
@@ -47,8 +47,8 @@ yrk=[]
 h=(16.0/80.0)
 i=0
 #euler(h,i,x,yeu)
-analitycznie(i,yan)
-#rungegokutty(h,i,x,yrk)
+analitically(i,yan)
+#rungekutta(h,i,x,yrk)
 #i=0
 #print("xi:    |yan:        |yeu:        |yrk:")
 #while i<=20:
